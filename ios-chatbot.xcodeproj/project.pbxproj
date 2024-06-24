@@ -19,6 +19,8 @@
 		1312DB8A2C293ED7001CF576 /* MessageThread.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1312DB892C293ED7001CF576 /* MessageThread.swift */; };
 		1312DB8D2C29402F001CF576 /* messageThreadData.json in Resources */ = {isa = PBXBuildFile; fileRef = 1312DB8C2C29402F001CF576 /* messageThreadData.json */; };
 		1312DB8F2C294311001CF576 /* MessageThreadDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1312DB8E2C294311001CF576 /* MessageThreadDetail.swift */; };
+		1312DB912C29462F001CF576 /* ios-chatbot-preview.png in Resources */ = {isa = PBXBuildFile; fileRef = 1312DB902C29462F001CF576 /* ios-chatbot-preview.png */; };
+		1312DB932C29464B001CF576 /* ios-chatbot-preview.png in Resources */ = {isa = PBXBuildFile; fileRef = 1312DB922C29464B001CF576 /* ios-chatbot-preview.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		1312DB892C293ED7001CF576 /* MessageThread.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageThread.swift; sourceTree = "<group>"; };
 		1312DB8C2C29402F001CF576 /* messageThreadData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = messageThreadData.json; sourceTree = "<group>"; };
 		1312DB8E2C294311001CF576 /* MessageThreadDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageThreadDetail.swift; sourceTree = "<group>"; };
+		1312DB902C29462F001CF576 /* ios-chatbot-preview.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ios-chatbot-preview.png"; path = "../../../../Downloads/ios-chatbot-preview.png"; sourceTree = "<group>"; };
+		1312DB922C29464B001CF576 /* ios-chatbot-preview.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ios-chatbot-preview.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +109,7 @@
 		1312DB562C2938F8001CF576 /* ios-chatbot */ = {
 			isa = PBXGroup;
 			children = (
+				1312DB922C29464B001CF576 /* ios-chatbot-preview.png */,
 				1312DB572C2938F8001CF576 /* ios_chatbotApp.swift */,
 				1312DB592C2938F8001CF576 /* ContentView.swift */,
 				1312DB8E2C294311001CF576 /* MessageThreadDetail.swift */,
@@ -137,6 +142,7 @@
 		1312DB742C2938FA001CF576 /* ios-chatbotUITests */ = {
 			isa = PBXGroup;
 			children = (
+				1312DB902C29462F001CF576 /* ios-chatbot-preview.png */,
 				1312DB752C2938FA001CF576 /* ios_chatbotUITests.swift */,
 				1312DB772C2938FA001CF576 /* ios_chatbotUITestsLaunchTests.swift */,
 			);
@@ -266,6 +272,8 @@
 			files = (
 				1312DB8D2C29402F001CF576 /* messageThreadData.json in Resources */,
 				1312DB622C2938FA001CF576 /* Preview Assets.xcassets in Resources */,
+				1312DB932C29464B001CF576 /* ios-chatbot-preview.png in Resources */,
+				1312DB912C29462F001CF576 /* ios-chatbot-preview.png in Resources */,
 				1312DB5E2C2938FA001CF576 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
