@@ -15,6 +15,10 @@
 		1312DB6C2C2938FA001CF576 /* ios_chatbotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1312DB6B2C2938FA001CF576 /* ios_chatbotTests.swift */; };
 		1312DB762C2938FA001CF576 /* ios_chatbotUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1312DB752C2938FA001CF576 /* ios_chatbotUITests.swift */; };
 		1312DB782C2938FA001CF576 /* ios_chatbotUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1312DB772C2938FA001CF576 /* ios_chatbotUITestsLaunchTests.swift */; };
+		1312DB862C293CF3001CF576 /* DataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1312DB852C293CF3001CF576 /* DataLoader.swift */; };
+		1312DB8A2C293ED7001CF576 /* MessageThread.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1312DB892C293ED7001CF576 /* MessageThread.swift */; };
+		1312DB8D2C29402F001CF576 /* messageThreadData.json in Resources */ = {isa = PBXBuildFile; fileRef = 1312DB8C2C29402F001CF576 /* messageThreadData.json */; };
+		1312DB8F2C294311001CF576 /* MessageThreadDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1312DB8E2C294311001CF576 /* MessageThreadDetail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,10 @@
 		1312DB712C2938FA001CF576 /* ios-chatbotUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ios-chatbotUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1312DB752C2938FA001CF576 /* ios_chatbotUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ios_chatbotUITests.swift; sourceTree = "<group>"; };
 		1312DB772C2938FA001CF576 /* ios_chatbotUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ios_chatbotUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		1312DB852C293CF3001CF576 /* DataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLoader.swift; sourceTree = "<group>"; };
+		1312DB892C293ED7001CF576 /* MessageThread.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageThread.swift; sourceTree = "<group>"; };
+		1312DB8C2C29402F001CF576 /* messageThreadData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = messageThreadData.json; sourceTree = "<group>"; };
+		1312DB8E2C294311001CF576 /* MessageThreadDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageThreadDetail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +107,12 @@
 			children = (
 				1312DB572C2938F8001CF576 /* ios_chatbotApp.swift */,
 				1312DB592C2938F8001CF576 /* ContentView.swift */,
+				1312DB8E2C294311001CF576 /* MessageThreadDetail.swift */,
 				1312DB5B2C2938F8001CF576 /* Item.swift */,
 				1312DB5D2C2938FA001CF576 /* Assets.xcassets */,
 				1312DB5F2C2938FA001CF576 /* ios_chatbot.entitlements */,
+				1312DB8B2C294016001CF576 /* Resources */,
+				1312DB842C293CDA001CF576 /* Model */,
 				1312DB602C2938FA001CF576 /* Preview Content */,
 			);
 			path = "ios-chatbot";
@@ -130,6 +141,23 @@
 				1312DB772C2938FA001CF576 /* ios_chatbotUITestsLaunchTests.swift */,
 			);
 			path = "ios-chatbotUITests";
+			sourceTree = "<group>";
+		};
+		1312DB842C293CDA001CF576 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1312DB852C293CF3001CF576 /* DataLoader.swift */,
+				1312DB892C293ED7001CF576 /* MessageThread.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1312DB8B2C294016001CF576 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1312DB8C2C29402F001CF576 /* messageThreadData.json */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,6 +264,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1312DB8D2C29402F001CF576 /* messageThreadData.json in Resources */,
 				1312DB622C2938FA001CF576 /* Preview Assets.xcassets in Resources */,
 				1312DB5E2C2938FA001CF576 /* Assets.xcassets in Resources */,
 			);
@@ -262,8 +291,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1312DB862C293CF3001CF576 /* DataLoader.swift in Sources */,
+				1312DB8A2C293ED7001CF576 /* MessageThread.swift in Sources */,
 				1312DB5A2C2938F8001CF576 /* ContentView.swift in Sources */,
 				1312DB5C2C2938F8001CF576 /* Item.swift in Sources */,
+				1312DB8F2C294311001CF576 /* MessageThreadDetail.swift in Sources */,
 				1312DB582C2938F8001CF576 /* ios_chatbotApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

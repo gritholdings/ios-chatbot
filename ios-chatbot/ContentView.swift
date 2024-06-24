@@ -9,58 +9,54 @@ import SwiftUI
 import SwiftData
 
 struct ContentView: View {
-    @Environment(\.modelContext) private var modelContext
-    @Query private var items: [Item]
+    @State private var selectedTab = 1
+    @State private var messageThreads: [MessageThread] = []
 
     var body: some View {
-        NavigationSplitView {
-            List {
-                ForEach(items) { item in
-                    NavigationLink {
-                        Text("Item at \(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))")
-                    } label: {
-                        Text(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))
-                    }
+        Text("My Chatbot")
+        TabView(selection: $selectedTab) {
+            MessageThreadView(messageThreads: $messageThreads)
+                .tabItem {
+                    Label("All Chats", systemImage: "wrench.and.screwdriver")
                 }
-                .onDelete(perform: deleteItems)
-            }
-#if os(macOS)
-            .navigationSplitViewColumnWidth(min: 180, ideal: 200)
-#endif
-            .toolbar {
-#if os(iOS)
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
+                .onAppear {
+                    messageThreads = MessageThread.loadMessageThreads()
                 }
-#endif
-                ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
-                    }
+                .tag(1)
+            ProfileView()
+                .tabItem {
+                    Label("Profile", systemImage: "person.circle")
                 }
-            }
-        } detail: {
-            Text("Select an item")
+                .tag(2)
         }
     }
+}
 
-    private func addItem() {
-        withAnimation {
-            let newItem = Item(timestamp: Date())
-            modelContext.insert(newItem)
+struct MessageThreadView: View {
+    @Binding var messageThreads: [MessageThread]
+    var body: some View {
+        VStack {
+            NavigationView {
+                List(messageThreads) { messageThread in
+                    NavigationLink(destination: MessageThreadDetail(messageThread: messageThread)) {
+                        VStack(alignment: .leading) {
+                            Text(messageThread.title)
+                        }
+                    }
+                }
+            }
         }
     }
+}
 
-    private func deleteItems(offsets: IndexSet) {
-        withAnimation {
-            for index in offsets {
-                modelContext.delete(items[index])
-            }
+struct ProfileView: View {
+    var body: some View {
+        VStack {
+            Text("Account Settings")
         }
     }
 }
 
 #Preview {
     ContentView()
-        .modelContainer(for: Item.self, inMemory: true)
 }
